@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './Calculator.css';
 
 function Calculator () {
 
@@ -51,23 +52,24 @@ function Calculator () {
     <div className="container">
 
     <h1>Simple Arithmetic Operations with React!</h1>
+    <hr></hr>
 
 
         
 
-    <form className="add">
+    <form className="form">
     <input type="number" placeholder="0" name="value1" value={value1} onChange={e =>setValue1(+e.target.value)}/>
     {/* 444<input type="text" placeholder="0" name="operand" value={operand} onChange={e =>setOperand(e.target.value)}/> */}
     <input type="number" placeholder="0" name="value2" value={value2} onChange={e =>setValue2(+e.target.value)}/>
-    
-    <input type="button" value="Add" onClick={add} />
-    <input type="button" value="Subtract" onClick={subtract} />
-    <input type="button" value="Divide" onClick={divide}/>
-    <input type="button" value="Multiply" onClick={multiply}/>
-    
+    <div class="button">
+    <input className = "input" type="button" value="Add" onClick={add} />
+    <input className = "input" type="button" value="Subtract" onClick={subtract} />
+    <input className = "input" type="button" value="Divide" onClick={divide}/>
+    <input className = "input" type="button" value="Multiply" onClick={multiply}/>
+    </div>
     {/* <span>=</span> */}
     {/* <button onClick={handleAddSum}>Result</button> */}
-    <h3>{sum}</h3>
+    <h1>{sum}</h1>
 
     
   </form>
